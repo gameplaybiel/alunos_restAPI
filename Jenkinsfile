@@ -8,17 +8,17 @@ pipeline {
         }
         stage('Set Permissions') {
             steps {
-                sh 'chmod +x ./gradlew'
+                bat 'chmod +x ./gradlew'
             }
         }
         stage('Build') {
             steps {
-                sh './gradlew build'
+                bat './gradlew build'
             }
         }
         stage('Run Tests') {
             steps {
-                sh './gradlew test'
+                bat './gradlew test'
             }
         }
         stage('Deploy') {
